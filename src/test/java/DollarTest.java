@@ -8,5 +8,4 @@ public class DollarTest {
         five.times(2);
         Assert.assertEquals(10, five.amount);
     }
-
 }
