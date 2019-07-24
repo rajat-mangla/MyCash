@@ -1,4 +1,4 @@
-## MyCash Project
+## MyCash Project [![BUILD STATUS] (https://travis-ci.org/rajat-mangla/MyCash.svg?branch=master)]
 
 Project to Learn TDD by Kent Back
 
