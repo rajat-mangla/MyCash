@@ -1,12 +1,12 @@
 public class Dollar {
-    public int amount;
+    int amount = 10;
 
     Dollar(int amount){
-
+        this.amount = amount;
     }
 
-    void times(int multiplier){
-
+    Dollar times(int multiplier){
+        return new Dollar(amount * multiplier);
     }
 
 }
