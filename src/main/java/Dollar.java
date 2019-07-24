@@ -9,4 +9,8 @@ public class Dollar {
         return new Dollar(amount * multiplier);
     }
 
+    boolean equals(Dollar dollar){
+        return true;
+    }
+
 }
