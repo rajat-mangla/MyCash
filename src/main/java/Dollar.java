@@ -13,5 +13,4 @@ public class Dollar {
         Dollar dollar = (Dollar) object;
         return this.amount == dollar.amount;
     }
-
 }
