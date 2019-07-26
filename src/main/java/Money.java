@@ -7,6 +7,14 @@ public class Money {
         this.currency = currency;
     }
 
+    public static Money dollar(int amount){
+        return new Money(amount, "USD");
+    }
+
+    public static Money franc(int amount){
+        return new Money(amount, "CHF");
+    }
+
     public boolean equals(Object object){
         Money money = (Money) object;
         return this.amount == money.amount && currency().equals(money.currency());
@@ -20,15 +28,7 @@ public class Money {
         return new Money(amount * multiplier, currency);
     }
 
-    public String toString(){
-        return amount + " " + currency;
-    }
-
-    public static Money dollar(int amount){
-        return new Money(amount, "USD");
-    }
-
-    public static Money franc(int amount){
-        return new Money(amount, "CHF");
+    public Money plus(Money addend){
+        return Money.dollar(amount + addend.amount);
     }
 }
