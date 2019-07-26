@@ -12,6 +12,16 @@ public class MoneyTest {
     }
 
     @Test
+    public void testDifferentClassEquality(){
+        Assert.assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
+    }
+
+    @Test
+    public void testMultiplication(){
+        Money dollar = Money.dollar(10);
+        Assert.assertEquals(Money.dollar(20), dollar.times(2));
+    }
+    @Test
     public void testCurrency(){
         Assert.assertEquals("USD", Money.dollar(1).currency());
         Assert.assertEquals("CHF", Money.franc(1).currency());
