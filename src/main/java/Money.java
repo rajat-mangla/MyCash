@@ -24,11 +24,11 @@ public class Money implements Expressions{
         return currency;
     }
 
-    public Money times(int multiplier){
+    public Expressions times(int multiplier){
         return new Money(amount * multiplier, currency);
     }
 
-    public Expressions plus(Money addend){
+    public Expressions plus(Expressions addend){
         return new Sum(this, addend);
     }
 
