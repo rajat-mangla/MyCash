@@ -1,4 +1,4 @@
-public class Money {
+public class Money{
     protected int amount;
     protected String currency;
 
@@ -28,7 +28,7 @@ public class Money {
         return new Money(amount * multiplier, currency);
     }
 
-    public Money plus(Money addend){
-        return Money.dollar(amount + addend.amount);
+    public Expressions plus(Money addend){
+        return new Sum(this, addend);
     }
 }
