@@ -32,8 +32,8 @@ public class BankTest {
 
     @Test
     public void testMixAddition(){
-        Money fiveBucks = Money.dollar(5);
-        Money tenFrancs = Money.franc(10);
+        Expressions fiveBucks = Money.dollar(5);
+        Expressions tenFrancs = Money.franc(10);
         Bank bank = new Bank();
         bank.addRate("CHF", "USD", 2);
         Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
