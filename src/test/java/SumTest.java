@@ -13,4 +13,15 @@ public class SumTest {
         Money result = bank.reduce(sum, "USD");
         Assert.assertEquals(Money.dollar(15), result);
     }
+
+    @Test
+    public void testSumTimes(){
+        Expressions fiveBucks = Money.dollar(5);
+        Expressions fiveFrancs= Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Expressions sum = new Sum(fiveBucks, fiveFrancs).times(2);
+        Money result = bank.reduce(sum, "USD");
+        Assert.assertEquals(Money.dollar(20), result);
+    }
 }
